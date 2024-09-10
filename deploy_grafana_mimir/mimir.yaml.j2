@@ -1,0 +1,19 @@
+# Mimir configuration file
+server:
+  http_listen_port: 8080
+
+storage:
+  tsdb:
+    dir: /var/lib/mimir/data
+
+auth_enabled: false
+
+target_config:
+  attach_enabled: true
+  tenant_strict_label_validation: false
+
+ruler:
+  storage:
+    type: local
+    local:
+      directory: /var/lib/mimir/rules
